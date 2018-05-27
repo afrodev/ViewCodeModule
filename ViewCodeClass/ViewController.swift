@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let screen = ViewControllerScreen()
+    
+    // Agora é preciso carregar essa view
+    override func loadView() {
+        let view = UIView(frame: UIScreen.main.bounds)
+        view.backgroundColor = .red
+        self.view = screen
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
