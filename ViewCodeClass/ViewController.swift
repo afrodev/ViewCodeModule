@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     let screen = ViewControllerScreen()
-    
+
     // Agora é preciso carregar essa view
     override func loadView() {
         let view = UIView(frame: UIScreen.main.bounds)

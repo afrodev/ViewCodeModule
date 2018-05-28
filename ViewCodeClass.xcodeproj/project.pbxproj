@@ -18,6 +18,9 @@
 		F2463CD120BB699D00EAA031 /* ViewCodeClassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2463CD020BB699D00EAA031 /* ViewCodeClassUITests.swift */; };
 		F2463CDF20BB6BFC00EAA031 /* ViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2463CDE20BB6BFC00EAA031 /* ViewControllerScreen.swift */; };
 		F2463CE120BB727000EAA031 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2463CE020BB727000EAA031 /* CodeView.swift */; };
+		F2463CE420BB76F800EAA031 /* GridBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2463CE320BB76F800EAA031 /* GridBoxView.swift */; };
+		F277A9EC20BB7A31001F101D /* GridBoxSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F277A9EB20BB7A31001F101D /* GridBoxSpec.swift */; };
+		F277A9EE20BB8529001F101D /* ViewControllerScreenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F277A9ED20BB8529001F101D /* ViewControllerScreenSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		F2463CD220BB699D00EAA031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2463CDE20BB6BFC00EAA031 /* ViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreen.swift; sourceTree = "<group>"; };
 		F2463CE020BB727000EAA031 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		F2463CE320BB76F800EAA031 /* GridBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxView.swift; sourceTree = "<group>"; };
+		F277A9EB20BB7A31001F101D /* GridBoxSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxSpec.swift; sourceTree = "<group>"; };
+		F277A9ED20BB8529001F101D /* ViewControllerScreenSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreenSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,13 +145,13 @@
 		F2463CAF20BB699C00EAA031 /* ViewCodeClass */ = {
 			isa = PBXGroup;
 			children = (
+				F2463CE220BB76DA00EAA031 /* Component */,
 				F2463CB020BB699C00EAA031 /* AppDelegate.swift */,
 				F2463CB220BB699C00EAA031 /* ViewController.swift */,
 				F2463CB720BB699D00EAA031 /* Assets.xcassets */,
 				F2463CB920BB699D00EAA031 /* LaunchScreen.storyboard */,
 				F2463CBC20BB699D00EAA031 /* Info.plist */,
 				F2463CDE20BB6BFC00EAA031 /* ViewControllerScreen.swift */,
-				F2463CE020BB727000EAA031 /* CodeView.swift */,
 			);
 			path = ViewCodeClass;
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 			children = (
 				F2463CC520BB699D00EAA031 /* ViewCodeClassTests.swift */,
 				F2463CC720BB699D00EAA031 /* Info.plist */,
+				F277A9EB20BB7A31001F101D /* GridBoxSpec.swift */,
+				F277A9ED20BB8529001F101D /* ViewControllerScreenSpec.swift */,
 			);
 			path = ViewCodeClassTests;
 			sourceTree = "<group>";
@@ -166,6 +174,15 @@
 				F2463CD220BB699D00EAA031 /* Info.plist */,
 			);
 			path = ViewCodeClassUITests;
+			sourceTree = "<group>";
+		};
+		F2463CE220BB76DA00EAA031 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F2463CE020BB727000EAA031 /* CodeView.swift */,
+				F2463CE320BB76F800EAA031 /* GridBoxView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,11 +340,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ViewCodeClass/Pods-ViewCodeClass-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -377,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2463CE420BB76F800EAA031 /* GridBoxView.swift in Sources */,
 				F2463CB320BB699C00EAA031 /* ViewController.swift in Sources */,
 				F2463CDF20BB6BFC00EAA031 /* ViewControllerScreen.swift in Sources */,
 				F2463CB120BB699C00EAA031 /* AppDelegate.swift in Sources */,
@@ -388,6 +414,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F277A9EC20BB7A31001F101D /* GridBoxSpec.swift in Sources */,
+				F277A9EE20BB8529001F101D /* ViewControllerScreenSpec.swift in Sources */,
 				F2463CC620BB699D00EAA031 /* ViewCodeClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,7 +578,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32E2F27634;
 				INFOPLIST_FILE = ViewCodeClass/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.afrodev.viewcodeclass.ViewCodeClass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -568,7 +599,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32E2F27634;
 				INFOPLIST_FILE = ViewCodeClass/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.afrodev.viewcodeclass.ViewCodeClass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -586,7 +620,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32E2F27634;
 				INFOPLIST_FILE = ViewCodeClassTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.afrodev.viewcodeclass.ViewCodeClassTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -604,7 +642,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32E2F27634;
 				INFOPLIST_FILE = ViewCodeClassTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.afrodev.viewcodeclass.ViewCodeClassTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -621,7 +663,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32E2F27634;
 				INFOPLIST_FILE = ViewCodeClassUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.afrodev.viewcodeclass.ViewCodeClassUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -638,7 +684,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32E2F27634;
 				INFOPLIST_FILE = ViewCodeClassUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.afrodev.viewcodeclass.ViewCodeClassUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
